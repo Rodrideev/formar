@@ -1,0 +1,32 @@
+.example-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 999;
+  }
+  .example-sidenav {
+    padding: 20px;
+    background-color: #111120;
+    overflow: hidden;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .sidenav{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .txt-formar{
+    color: #FFFFFF;
+    padding-left: 10px;
+  }
+  .hover-sidenav{
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  .hover-sidenav:hover{
+    background-color: #25AB7C;
+    padding: 10px;
+    border-radius: 10px;
+  }

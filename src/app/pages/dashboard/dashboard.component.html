@@ -1,1 +1,39 @@
-<p>dashboard works!</p>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <div class="sidenav">
+            <mat-icon>school</mat-icon>
+            <span class="txt-formar">Formar</span>
+        </div>
+        <div class="container p-0">
+            <div class="row m-0">
+              <div class="col-4 py-5">
+                <a class="hover-sidenav">Cursos</a>
+              </div>
+            </div>
+          </div>
+          <div class="container p-0">
+            <div class="row  m-0">
+              <div class="col-4 py-2">
+                <a class="hover-sidenav">Estudiantes</a>
+              </div>
+            </div>
+          </div>
+    </mat-drawer>
+  
+    <mat-toolbar>
+        <button  (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>person-circle-outline</mat-icon>
+        </button>
+        <p>Rodrigo Riveros</p>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </mat-toolbar>
+      <app-users></app-users>
+  </mat-drawer-container>
+  
+
