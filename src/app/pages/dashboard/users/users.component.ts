@@ -1,25 +1,19 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { User } from './models';
 
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  mail: string;
-  courses: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Rodrigo', mail: 'user@gmail.com', courses: 'Desarrollo Frontend'},
-  {position: 2, name: 'Ezequiel', mail: 'user@gmail.com', courses: 'Backend'},
-  {position: 3, name: 'Armando', mail: 'user@gmail.com', courses: 'Diseño ux/ui'},
-  {position: 4, name: 'Nicolas', mail: 'user@gmail.com', courses: 'Desarrollo Frontend'},
-  {position: 5, name: 'Sergio', mail: 'user@gmail.com', courses: 'Diseño ux/ui'},
-  {position: 6, name: 'Lautaro', mail: 'user@gmail.com', courses: 'Desarrollo Frontend'},
-  {position: 7, name: 'Alejandro', mail: 'user@gmail.com', courses: 'Backend'},
-  {position: 8, name: 'Omar', mail: 'user@gmail.com', courses: 'Desarrollo Frontend'},
-  {position: 9, name: 'Vicente', mail: 'user@gmail.com', courses: 'Diseño ux/ui'},
-  {position: 10, name: 'Julio', mail: 'user@gmail.com', courses: 'Backend'},
+const ELEMENT_DATA: User[] = [
+  {id: 1, firstName: 'Rodrigo', lastName: 'Riveros' , email: 'user@gmail.com', courses: 'Desarrollo Frontend', createdAt: new Date()},
+  {id: 2, firstName: 'Ezequiel', lastName: 'Altamirano' , email: 'user@gmail.com', courses: 'Backend', createdAt: new Date()},
+  {id: 3, firstName: 'Armando', lastName: 'Gongoso' , email: 'user@gmail.com', courses: 'Diseño ux/ui', createdAt: new Date()},
+  {id: 4, firstName: 'Nicolas', lastName: 'Serrudo' , email: 'user@gmail.com', courses: 'Desarrollo Frontend', createdAt: new Date()},
+  {id: 5, firstName: 'Sergio', lastName: 'Prieto' , email: 'user@gmail.com', courses: 'Diseño ux/ui', createdAt: new Date()},
+  {id: 6, firstName: 'Lautaro', lastName: 'Martinez' , email: 'user@gmail.com', courses: 'Desarrollo Frontend', createdAt: new Date()},
+  {id: 7, firstName: 'Alejandro', lastName: 'Garnacho' , email: 'user@gmail.com', courses: 'Backend', createdAt: new Date()},
+  {id: 8, firstName: 'Omar', lastName: 'Don' , email: 'user@gmail.com', courses: 'Desarrollo Frontend', createdAt: new Date()},
+  {id: 9, firstName: 'Vicente', lastName: 'Viloni' , email: 'user@gmail.com', courses: 'Diseño ux/ui', createdAt: new Date()},
+  {id: 10, firstName: 'Julio', lastName: 'Cesar' , email: 'user@gmail.com', courses: 'Backend', createdAt: new Date()},
 ];
 
 @Component({
@@ -28,7 +22,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
-  displayedColumns: string[] = ['position', 'name', 'mail', 'courses'];
+  displayedColumns: string[] = ['id', 'firstName', 'email', 'courses', 'createdAt'];
   dataSource = ELEMENT_DATA;
   constructor(private matDialog: MatDialog){}
 }
